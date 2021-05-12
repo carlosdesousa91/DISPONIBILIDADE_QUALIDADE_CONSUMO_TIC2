@@ -64,9 +64,9 @@ function decodeResultToken($tokenResponse){
 
     $token = $tokenResult["access_token"];
 
-    //$embeddedToken = "Bearer "  . ' ' .  $token;
+    $embeddedToken = "Bearer "  . ' ' .  $token;
 
-    return $token;
+    return $embeddedToken;
 }
 
 function embeddedToken($access_token_decoded){
