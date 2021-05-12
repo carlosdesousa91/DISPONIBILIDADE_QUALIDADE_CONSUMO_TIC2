@@ -91,7 +91,7 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 
-        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_CUSTOMREQUEST => "Post",
 
         CURLOPT_POSTFIELDS => $body,
 
