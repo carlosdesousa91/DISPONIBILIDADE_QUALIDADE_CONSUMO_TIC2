@@ -1,4 +1,4 @@
-<?
+<?php
     include './powerbi.php';
 ?>
 <html>
@@ -14,8 +14,8 @@
 </style>
 </head>
 <body>
-	
-<? echo(json_encode(getNewUserAccessToken()));?>
+
+<?php echo(json_encode(getNewUserAccessToken()));?>
 
 <div id="reportContainer" >
 </div>
