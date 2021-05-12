@@ -103,7 +103,7 @@ function embeddedToken($access_token_decoded){
 
         "Content-Type: application/json",
 
-        "Content-Length: " . strlen($body),
+        "Content-Length: 0",
 
         ),
 
