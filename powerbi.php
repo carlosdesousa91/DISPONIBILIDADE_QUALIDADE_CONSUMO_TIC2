@@ -5,7 +5,7 @@ include './_access.php';
 function getNewUserAccessToken(){
 
     global $access_client_id, $access_username, $access_password;
-    
+
     /* Get oauth2 token using a POST request */
     $curlPostToken = curl_init();
 
@@ -64,8 +64,48 @@ function decodeResultToken($tokenResponse){
 
     $token = $tokenResult["access_token"];
 
-    $embeddedToken = "Bearer "  . ' ' .  $token;
+    //$embeddedToken = "Bearer "  . ' ' .  $token;
 
-    return $embeddedToken;
+    return $token;
+}
+
+function embeddedToken($access_token_decoded){
+        /*      Use the token to get an embedded URL using a GET request */
+        $curlGetUrl = curl_init();
+
+        curl_setopt_array($curlGetUrl, array(
+
+        CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/6b98c748-3362-47e1-bc29-b6e586e8c279/reports/",
+
+        CURLOPT_RETURNTRANSFER => true,
+
+        CURLOPT_ENCODING => "",
+
+        CURLOPT_MAXREDIRS => 10,
+
+        CURLOPT_TIMEOUT => 30,
+
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+
+        CURLOPT_CUSTOMREQUEST => "GET",
+
+        CURLOPT_HTTPHEADER => array(
+
+        "Authorization: $access_token_decoded",
+
+        "Cache-Control: no-cache",
+
+        ),
+
+        ));
+
+        $embedResponse = curl_exec($curlGetUrl);
+
+        $embedError = curl_error($curlGetUrl);
+
+        curl_close($$curlGetUrl);
+
+        return $embedResponse;
+
 }
 ?>
