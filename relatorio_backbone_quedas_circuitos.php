@@ -1,3 +1,6 @@
+<?
+    include './powerbi.php';
+?>
 <html>
 <head>
 <script src="./js/powerbi-client/dist/powerbi.js"></script>
@@ -11,6 +14,9 @@
 </style>
 </head>
 <body>
+	
+<? echo(json_encode(getNewUserAccessToken()));?>
+
 <div id="reportContainer" >
 </div>
 
