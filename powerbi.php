@@ -1,5 +1,7 @@
 <?php
 
+include './_access.php';
+
 function getNewUserAccessToken(){
     /* Get oauth2 token using a POST request */
     $curlPostToken = curl_init();
@@ -28,11 +30,11 @@ function getNewUserAccessToken(){
 
     resource => 'https://analysis.windows.net/powerbi/api',
 
-    client_id => '', // Registered App ApplicationID
+    client_id => access_client_id, // Registered App ApplicationID
 
-    username => '', // for example john.doe@yourdomain.com
+    username => access_username, // for example john.doe@yourdomain.com
 
-    password => '' // Azure password for above user
+    password => access_password // Azure password for above user
 
     )
 
