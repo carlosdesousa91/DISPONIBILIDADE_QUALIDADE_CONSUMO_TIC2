@@ -52,4 +52,15 @@ function getNewUserAccessToken(){
 
 }
 
+function decodeResultToken($tokenResponse){
+    // decode result, and store the access_token in $embeddedToken variable:
+
+    $tokenResult = json_decode($tokenResponse, true);
+
+    $token = $tokenResult["access_token"];
+
+    $embeddedToken = "Bearer "  . ' ' .  $token;
+
+    return $embeddedToken;
+}
 ?>

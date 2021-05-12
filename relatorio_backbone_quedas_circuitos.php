@@ -15,7 +15,14 @@
 </head>
 <body>
 
-<?php echo(json_encode(getNewUserAccessToken()));?>
+<?php 
+
+	$access_token = getNewUserAccessToken();
+	$access_token_decoded = decodeResultToken($access_token);
+
+	echo($access_token_decoded);
+
+?>
 
 <div id="reportContainer" >
 </div>
