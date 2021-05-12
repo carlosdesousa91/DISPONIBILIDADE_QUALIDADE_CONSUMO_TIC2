@@ -75,7 +75,7 @@ function embeddedToken($access_token_decoded){
 
         curl_setopt_array($curlGetUrl, array(
 
-        CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/",
+        CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/92293a09-3e75-4fd9-b387-32b29009f331/GenerateToken",
 
         CURLOPT_RETURNTRANSFER => true,
 
