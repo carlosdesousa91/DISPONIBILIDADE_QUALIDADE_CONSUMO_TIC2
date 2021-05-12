@@ -98,15 +98,13 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_HTTPHEADER => array(
 
-        "Authorization: $access_token_decoded",
+        "Authorization: " . $access_token_decoded,
 
         "Cache-Control: no-cache",
 
         "Content-Type: application/json",
 
         "Content-Length: 0",
-
-        "refreshRequest: y",
 
         ),
 
