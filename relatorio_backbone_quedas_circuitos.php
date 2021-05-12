@@ -20,7 +20,7 @@
 	$access_token = getNewUserAccessToken();
 	$access_token_decoded = decodeResultToken($access_token);
 
-	echo($access_token_decoded);
+	echo(json_encode($access_token_decoded));
 
 ?>
 
