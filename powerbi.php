@@ -75,7 +75,7 @@ function embeddedToken($access_token_decoded){
 
         $body = array(
             'accessLeval' => 'View',
-            'refreshRequest' => 'y'
+            'request' => 'post'
         );
 
         curl_setopt_array($curlGetUrl, array(
@@ -90,7 +90,7 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_TIMEOUT => 30,
 
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 
         CURLOPT_CUSTOMREQUEST => "POST",
 
