@@ -30,11 +30,11 @@ function getNewUserAccessToken(){
 
     resource => 'https://analysis.windows.net/powerbi/api',
 
-    client_id => access_client_id, // Registered App ApplicationID
+    client_id => $access_client_id, // Registered App ApplicationID
 
-    username => access_username, // for example john.doe@yourdomain.com
+    username => $access_username, // for example john.doe@yourdomain.com
 
-    password => access_password // Azure password for above user
+    password => $access_password // Azure password for above user
 
     )
 
