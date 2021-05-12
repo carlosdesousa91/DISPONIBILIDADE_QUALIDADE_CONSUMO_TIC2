@@ -73,6 +73,10 @@ function embeddedToken($access_token_decoded){
         /*      Use the token to get an embedded URL using a GET request */
         $curlGetUrl = curl_init();
 
+        $body = array(
+            'accessLeval' => 'View'
+        );
+
         curl_setopt_array($curlGetUrl, array(
 
         CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/92293a09-3e75-4fd9-b387-32b29009f331/GenerateToken",
@@ -89,11 +93,17 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_CUSTOMREQUEST => "POST",
 
+        CURLOPT_POSTFIELDS => $body,
+
         CURLOPT_HTTPHEADER => array(
 
         "Authorization: $access_token_decoded",
 
         "Cache-Control: no-cache",
+
+        "Content-Type: application/json",
+
+        "Content-Length: " . strlen($body),
 
         ),
 
