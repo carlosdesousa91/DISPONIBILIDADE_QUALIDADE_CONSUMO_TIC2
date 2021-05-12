@@ -3,6 +3,7 @@
 include './_access.php';
 
 function getNewUserAccessToken(){
+    global $access_client_id, $access_username, $access_password;
     /* Get oauth2 token using a POST request */
     $curlPostToken = curl_init();
 
@@ -30,11 +31,11 @@ function getNewUserAccessToken(){
 
     resource => 'https://analysis.windows.net/powerbi/api',
 
-    client_id => global $access_client_id, // Registered App ApplicationID
+    client_id => $access_client_id, // Registered App ApplicationID
 
-    username => global $access_username, // for example john.doe@yourdomain.com
+    username => $access_username, // for example john.doe@yourdomain.com
 
-    password => global $access_password // Azure password for above user
+    password => $access_password // Azure password for above user
 
     )
 
