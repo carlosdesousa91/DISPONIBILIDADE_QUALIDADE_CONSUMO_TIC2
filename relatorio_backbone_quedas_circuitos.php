@@ -21,8 +21,8 @@
 	//echo(json_encode($access_token));
 	$access_token_decoded = decodeResultToken($access_token);
 	echo($access_token_decoded);
-	//$embedded_token = embeddedToken($access_token_decoded);
-	//echo($embedded_token);
+	$embedded_token = embeddedToken($access_token_decoded);
+	echo($embedded_token);
 
 ?>
 
