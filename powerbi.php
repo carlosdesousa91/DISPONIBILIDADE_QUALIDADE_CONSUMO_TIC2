@@ -3,7 +3,9 @@
 include './_access.php';
 
 function getNewUserAccessToken(){
+
     global $access_client_id, $access_username, $access_password;
+    
     /* Get oauth2 token using a POST request */
     $curlPostToken = curl_init();
 
