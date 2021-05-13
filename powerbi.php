@@ -77,6 +77,7 @@ function embeddedToken($access_token_decoded){
             'accessLeval' => 'View',
             'request' => 'Post',
         );
+        $argument_json = json_encode($body);
 
         curl_setopt_array($curlGetUrl, array(
 
@@ -94,7 +95,7 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_CUSTOMREQUEST => "Post",
 
-        CURLOPT_POSTFIELDS => json_encode($body),
+        CURLOPT_POSTFIELDS => $argument_json,
 
         CURLOPT_HTTPHEADER => array(
 
@@ -105,6 +106,8 @@ function embeddedToken($access_token_decoded){
         "Content-Type: application/json",
 
         "Content-Length: 0",
+
+		"Accept: application/json",
 
       
         ),
