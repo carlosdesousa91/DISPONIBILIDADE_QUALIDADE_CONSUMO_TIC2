@@ -76,7 +76,6 @@ function embeddedToken($access_token_decoded){
         $body = array(
             'accessLeval' => 'View',
             'request' => 'Post',
-            'target' => 'request'
         );
 
         curl_setopt_array($curlGetUrl, array(
@@ -95,7 +94,7 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_CUSTOMREQUEST => "Post",
 
-        CURLOPT_POSTFIELDS => "{}",
+        CURLOPT_POSTFIELDS => json_encode($body),
 
         CURLOPT_HTTPHEADER => array(
 
