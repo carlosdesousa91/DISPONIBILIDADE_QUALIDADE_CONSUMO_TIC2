@@ -64,7 +64,7 @@ function decodeResultToken($tokenResponse){
 
     $token = $tokenResult["access_token"];
 
-    $embeddedToken = "Bearer "  . ' ' .  $token;
+    $embeddedToken = "Bearer"  . ' ' .  $token;
 
     return $embeddedToken;
 }
@@ -75,8 +75,9 @@ function embeddedToken($access_token_decoded){
 
         $body = array(
             'accessLeval' => 'View',
-            'request' => 'Post',
+            'request' => 'Post'
         );
+
         $argument_json = json_encode($body);
 
         curl_setopt_array($curlGetUrl, array(
@@ -108,7 +109,6 @@ function embeddedToken($access_token_decoded){
         "Content-Length: 0",
 
 		"Accept: application/json",
-
       
         ),
 
