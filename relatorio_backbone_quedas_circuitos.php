@@ -20,9 +20,10 @@
 	$access_token = getNewUserAccessToken();
 	//echo(json_encode($access_token));
 	$access_token_decoded = decodeResultToken($access_token);
+	echo("Token de acesso:<br/><br/>");
 	echo($access_token_decoded);
-	echo("<br/><br/>pula linha");
 	$embedded_token = embeddedToken2($access_token_decoded);
+	echo("Token de embedded:<br/><br/>");
 	echo($embedded_token);
 
 ?>

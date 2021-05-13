@@ -12,3 +12,9 @@
 
 ?>
 ```
+
+##### referencias:
+
+https://docs.microsoft.com/en-us/javascript/api/overview/powerbi/refresh-token
+https://www.youtube.com/watch?v=dL-0-ezd84w&ab_channel=LeonardoKarpinski-PowerBIMaster
+https://www.msbiblog.com/2018/01/12/power-bi-embedded-example-using-curl-and-php/
