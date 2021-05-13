@@ -22,7 +22,7 @@
 	$access_token_decoded = decodeResultToken($access_token);
 	echo($access_token_decoded);
 	echo("<br/><br/>pula linha");
-	$embedded_token = embeddedToken($access_token_decoded);
+	$embedded_token = embeddedToken2($access_token_decoded);
 	echo($embedded_token);
 
 ?>

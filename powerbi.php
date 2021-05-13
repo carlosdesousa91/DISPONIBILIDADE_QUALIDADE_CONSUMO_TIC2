@@ -123,4 +123,36 @@ function embeddedToken($access_token_decoded){
         return $embedResponse;
 
 }
+
+function embeddedToken2($access_token_decoded){
+    $base_url = 'https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/92293a09-3e75-4fd9-b387-32b29009f331/GenerateToken';
+	$ch = curl_init($base_url);
+    if ($ch == false) {
+		$this->setWsError("cannot init curl object");
+		return 1;
+	}
+    $argument = array(        
+        'accessLeval' => 'View',
+        'request' => 'Post'      
+    );
+    $argument_json = json_encode($argument);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $argument_json);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		'Content-Type: application/json',
+        'Authorization: ' . $access_token_decoded,
+		'Accept: application/json',
+		'Content-Length: ' . strlen($argument_json),
+		'Connection: close', 
+		'Cache-Control: no-cache')
+	);
+    $result = curl_exec($ch);
+    $decoded_result = json_decode($result, TRUE);
+    curl_close($ch);
+    return $decoded_result;
+}
 ?>
