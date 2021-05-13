@@ -94,10 +94,11 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 
-        CURLOPT_CUSTOMREQUEST => "Post",
-        CURLOPT_POST    => 1,
-
-        CURLOPT_POSTFIELDS => $argument_json,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        
+        CURLOPT_POSTFIELDS => array(
+            request => 'request'
+        ),
 
         CURLOPT_HTTPHEADER => array(
 
@@ -107,9 +108,7 @@ function embeddedToken($access_token_decoded){
 
         "Content-Type: application/json",
 
-        "Content-Length: 0",
-
-		"Accept: application/json",
+        "Content-Length: 0"
       
         ),
 
