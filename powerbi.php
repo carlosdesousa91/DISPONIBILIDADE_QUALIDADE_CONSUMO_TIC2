@@ -106,6 +106,8 @@ function embeddedToken($access_token_decoded){
 
         "Content-Length: 0",
 
+        "request: Post",
+
         ),
 
         ));
