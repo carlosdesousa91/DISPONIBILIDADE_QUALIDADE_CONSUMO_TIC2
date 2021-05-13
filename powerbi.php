@@ -95,7 +95,7 @@ function embeddedToken($access_token_decoded){
 
         CURLOPT_CUSTOMREQUEST => "Post",
 
-        CURLOPT_POSTFIELDS => $body,
+        CURLOPT_POSTFIELDS => "{}",
 
         CURLOPT_HTTPHEADER => array(
 
@@ -107,8 +107,7 @@ function embeddedToken($access_token_decoded){
 
         "Content-Length: 0",
 
-        "target: request",
-
+      
         ),
 
         ));
