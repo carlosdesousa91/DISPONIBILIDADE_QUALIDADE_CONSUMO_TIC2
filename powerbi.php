@@ -153,6 +153,6 @@ function embeddedToken2($access_token_decoded){
     $result = curl_exec($ch);
     $decoded_result = json_decode($result, TRUE);
     curl_close($ch);
-    return $decoded_result;
+    return $decoded_result[0]['token'];
 }
 ?>
