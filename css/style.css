@@ -16,7 +16,8 @@
         list-style:none;
         color: color:#023399;
         font-size:18pt;
-        background-image:url('./images/background_lines_2.png');
+        font-family: Condesed;
+        background-image:url('../../images/background_lines_2.png');
       }
       .liMenu{
         border-bottom-style: solid;
@@ -24,7 +25,7 @@
         padding: 25px;
       }
 
-      .h4TituloMenu{
+      .h3TituloMenu{
         font-weight: bold !important;
         text-shadow: 1px 1px 1px 1px rgba(0,0,0,.6);
         text-align:center; color:#fff;
