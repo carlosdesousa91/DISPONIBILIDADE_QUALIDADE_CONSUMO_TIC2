@@ -1,6 +1,6 @@
 @font-face {
-	font-family: Universe Condesed;
-	src: url(../fonts/univers-condensed.ttf)
+	font-family: Condesed;
+	src: url(../fonts/univers-condensed-67-bold.otf)
 }
        a#link{
         color:#023399;
@@ -31,5 +31,5 @@
         background-color: rgba(60,68,77,.9);
         PADDING: 20PX !important;
         MARGIN: -10PX !important;
-        font-family: Universe Condesed;
+        font-family: Condesed;
       }
