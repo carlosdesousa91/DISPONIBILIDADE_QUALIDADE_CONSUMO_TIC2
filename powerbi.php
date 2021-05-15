@@ -122,9 +122,14 @@ function embeddedToken($access_token_decoded){
 		return 1;
 	}
     $argument = array(        
-        'accessLevel' => 'Edit',
+        'accessLevel' => 'View',
         'allowSaveAs' => 'true',
-        'request' => 'Post'      
+        'request' => 'Post',
+        'identities' => array(
+            'username' => 'carlos.sousa@terceiro.rnp.br',
+            'roles' => 'DYNAMIC_RLS'
+            //"datasets": ["f1878c57-1046-4f07-a96a-05e970a85f6d"]
+            )     
     );
     $argument_json = json_encode($argument);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
