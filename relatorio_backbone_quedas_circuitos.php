@@ -43,8 +43,8 @@ var embedConfiguration = {
 	embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=0837ef15-c683-4ccf-ab33-9e2e8a363b6a&groupId=63df1a7f-98af-4f6d-9639-a1f3d011e5e2',
 	tokenType: models.TokenType.Embed,
 	accessToken: "<?php echo $embedded_token; ?>",
-	permissions: models.Permissions.All /*gives maximum permissions*/,
-    viewMode: models.ViewMode.Edit,
+	//permissions: models.Permissions.All /*gives maximum permissions*/,
+    //viewMode: models.ViewMode.Edit,
 	settings: {
 		filterPaneEnabled: true,
 		navContentPaneEnabled: true,
