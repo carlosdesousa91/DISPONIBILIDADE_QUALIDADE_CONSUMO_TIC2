@@ -123,7 +123,7 @@ function embeddedToken($access_token_decoded){
 	}
     $argument = array(        
         'accessLevel' => 'Edit',
-        'allowSaveAs': 'true',
+        'allowSaveAs' => 'true',
         'request' => 'Post'      
     );
     $argument_json = json_encode($argument);
