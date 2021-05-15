@@ -46,7 +46,7 @@ var embedConfiguration = {
 	settings: {
 		filterPaneEnabled: true,
 		navContentPaneEnabled: true,
-		appBarContentPaneEnabled: true,
+		appBarEnabled: true,
 		pageName:true
 	}
 
