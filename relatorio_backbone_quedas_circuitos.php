@@ -44,7 +44,7 @@ var embedConfiguration = {
 	tokenType: models.TokenType.Embed,
 	accessToken: "<?php echo $embedded_token; ?>",
 	permissions: models.Permissions.All /*gives maximum permissions*/,
-    viewMode: models.ViewMode.Edit,
+    viewMode: models.ViewMode.View,
 	settings: {
 		filterPaneEnabled: true,
 		navContentPaneEnabled: true,
