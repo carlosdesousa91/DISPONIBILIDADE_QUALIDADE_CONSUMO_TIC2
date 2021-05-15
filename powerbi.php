@@ -74,16 +74,9 @@ function recuperarRelatorios($access_token_decoded){
         /*      Use the token to get an embedded URL using a GET request */
         $curlGetUrl = curl_init();
 
-        $body = array(
-            'accessLeval' => 'View',
-            'request' => 'Post'
-        );
-
-        $argument_json = json_encode($body);
-
         curl_setopt_array($curlGetUrl, array(
 
-        CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/92293a09-3e75-4fd9-b387-32b29009f331/GenerateToken",
+        CURLOPT_URL => "https://api.powerbi.com/v1.0/myorg/groups/63df1a7f-98af-4f6d-9639-a1f3d011e5e2/reports/",
 
         CURLOPT_RETURNTRANSFER => true,
 
@@ -95,7 +88,7 @@ function recuperarRelatorios($access_token_decoded){
 
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 
-        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_CUSTOMREQUEST => "GET",
         
         CURLOPT_POSTFIELDS => array(
             request => 'request'
@@ -105,12 +98,8 @@ function recuperarRelatorios($access_token_decoded){
 
         "Authorization: " . $access_token_decoded,
 
-        "Cache-Control: no-cache",
-
         "Content-Type: application/json",
-
-        "Content-Length: 0"
-      
+        
         ),
 
         ));
