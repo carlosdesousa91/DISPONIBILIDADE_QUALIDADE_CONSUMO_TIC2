@@ -11,6 +11,6 @@
 	//echo($access_token_decoded);
 	$reports = recuperarRelatorios($access_token_decoded);
 	//echo("<br/><br/>Token de embedded:<br/><br/>");
-	echo(json_encode($reports));
+	echo($reports);
 
 ?>
