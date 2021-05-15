@@ -20,11 +20,11 @@
 	$access_token = getNewUserAccessToken();
 	//echo(json_encode($access_token));
 	$access_token_decoded = decodeResultToken($access_token);
-	//echo("<br/><br/>Token de acesso:<br/><br/>");
-	//echo($access_token_decoded);
+	echo("<br/><br/>Token de acesso:<br/><br/>");
+	echo($access_token_decoded);
 	$embedded_token = embeddedToken($access_token_decoded);
-	//echo("<br/><br/>Token de embedded:<br/><br/>");
-	//echo($embedded_token);
+	echo("<br/><br/>Token de embedded:<br/><br/>");
+	echo($embedded_token);
 
 ?>
 
