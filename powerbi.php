@@ -122,7 +122,7 @@ function embeddedToken($access_token_decoded){
 		return 1;
 	}
     $argument = array(        
-        'accessLeval' => 'Admin',
+        'accessLeval' => 'edit',
         'request' => 'Post'      
     );
     $argument_json = json_encode($argument);

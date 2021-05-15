@@ -45,7 +45,7 @@ var embedConfiguration = {
 	accessToken: "<?php echo $embedded_token; ?>",
 	settings: {
 		filterPaneEnabled: true,
-		navContentPaneEnabled: true,
+		navContentPaneEnabled: false,
 		pageName:true
 	}
 
