@@ -69,7 +69,7 @@ function decodeResultToken($tokenResponse){
     return $embeddedToken;
 }
 
-//refatorar a função abaixo para recuperar os relatórios, ids, etc....
+//a função abaixo para recupera os relatórios, ids, etc....
 function recuperarRelatorios($access_token_decoded){
         /*      Use the token to get an embedded URL using a GET request */
         $curlGetUrl = curl_init();
@@ -99,7 +99,7 @@ function recuperarRelatorios($access_token_decoded){
         "Authorization: " . $access_token_decoded,
 
         "Content-Type: application/json",
-        
+
         ),
 
         ));
@@ -122,7 +122,7 @@ function embeddedToken($access_token_decoded){
 		return 1;
 	}
     $argument = array(        
-        'accessLeval' => 'View',
+        'accessLeval' => 'Contributor',
         'request' => 'Post'      
     );
     $argument_json = json_encode($argument);
