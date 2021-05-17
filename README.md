@@ -21,6 +21,8 @@ https://www.youtube.com/watch?v=dL-0-ezd84w&ab_channel=LeonardoKarpinski-PowerBI
 
 https://www.msbiblog.com/2018/01/12/power-bi-embedded-example-using-curl-and-php/
 
+https://docs.microsoft.com/en-us/rest/api/power-bi/reports/exporttofile (exportar)
+
 ##### playground
 
 ###### instalar Login-PowerBI

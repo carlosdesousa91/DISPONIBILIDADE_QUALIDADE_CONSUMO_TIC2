@@ -22,7 +22,7 @@
 	$access_token_decoded = decodeResultToken($access_token);
 	//echo("<br/><br/>Token de acesso:<br/><br/>");
 	//echo($access_token_decoded);
-	$embedded_token = embeddedToken($access_token_decoded, "0837ef15-c683-4ccf-ab33-9e2e8a363b6a");
+	$embedded_token = embeddedToken($access_token_decoded, "005a1612-93a4-4c43-8daa-c344e8843ec0");
 	//echo("<br/><br/>Token de embedded:<br/><br/>");
 	//echo($embedded_token);
 
@@ -38,9 +38,9 @@ var models = window['powerbi-client'].models;
 
 var embedConfiguration = {
 	type: 'report',
-	id: '0837ef15-c683-4ccf-ab33-9e2e8a363b6a',
+	id: '005a1612-93a4-4c43-8daa-c344e8843ec0',
 	//embedUrl: 'https://app.powerbi.com/reportEmbed',
-	embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=0837ef15-c683-4ccf-ab33-9e2e8a363b6a&groupId=63df1a7f-98af-4f6d-9639-a1f3d011e5e2',
+	embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=005a1612-93a4-4c43-8daa-c344e8843ec0&groupId=63df1a7f-98af-4f6d-9639-a1f3d011e5e2',
 	tokenType: models.TokenType.Embed,
 	accessToken: "<?php echo $embedded_token; ?>",
 	//permissions: models.Permissions.All /*gives maximum permissions*/,
